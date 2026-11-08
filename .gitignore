@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Secrets / local env
+.env
+.env.*
+!.env*.example
+!example.env
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+
+# Backups
+.git-backup-*/
