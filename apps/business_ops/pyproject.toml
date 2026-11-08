@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "business_ops"
+version = "0.1.0"
+description = "Central operational controls for ERPNext"
+requires-python = ">=3.10"
+authors = [{ name = "Business ERP Team" }]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+business_ops = ["modules.txt"]
