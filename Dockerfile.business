@@ -1,0 +1,10 @@
+ARG ERPNEXT_VERSION=v16.52.1
+FROM frappe/erpnext:${ERPNEXT_VERSION}
+
+USER root
+COPY apps/business_ops /home/frappe/frappe-bench/apps/business_ops
+
+RUN chown -R frappe:frappe /home/frappe/frappe-bench/apps/business_ops \
+    && su frappe -s /bin/bash -c "cd /home/frappe/frappe-bench && ./env/bin/pip install --no-cache-dir -e apps/business_ops"
+
+USER frappe

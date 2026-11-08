@@ -1,0 +1,4 @@
+# This is an overlay for the official Frappe Docker production Compose files.
+# The base image is built locally from Dockerfile.business and includes the
+# business_ops Frappe app. Compose inputs are assembled by scripts/render-compose.sh.
+services: {}
