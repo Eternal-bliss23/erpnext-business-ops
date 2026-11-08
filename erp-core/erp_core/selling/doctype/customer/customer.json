@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "autoname": "field:customer_name",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "customer_type",
+  "territory",
+  "mobile_no",
+  "email_id",
+  "tax_id"
+ ],
+ "fields": [
+  {"fieldname": "customer_name", "fieldtype": "Data", "label": "Customer Name", "reqd": 1, "unique": 1},
+  {"fieldname": "customer_type", "fieldtype": "Select", "label": "Customer Type", "options": "Company\nIndividual", "default": "Company"},
+  {"fieldname": "territory", "fieldtype": "Data", "label": "Territory"},
+  {"fieldname": "mobile_no", "fieldtype": "Data", "label": "Mobile No"},
+  {"fieldname": "email_id", "fieldtype": "Data", "label": "Email"},
+  {"fieldname": "tax_id", "fieldtype": "Data", "label": "Tax ID"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Selling",
+ "name": "Customer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Sales User", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

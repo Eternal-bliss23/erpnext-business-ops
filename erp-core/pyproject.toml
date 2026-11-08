@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "erp_core"
+version = "0.0.1"
+description = "Comprehensive open-source ERP system built on Frappe Framework"
+authors = [
+    {name = "Your Company", email = "admin@example.com"},
+]
+license = {text = "MIT"}
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["erp_core*"]

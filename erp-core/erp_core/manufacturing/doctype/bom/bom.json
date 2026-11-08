@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "item",
+  "company",
+  "quantity",
+  "is_active",
+  "items"
+ ],
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "BOM-.YYYY.-", "reqd": 1},
+  {"fieldname": "item", "fieldtype": "Link", "label": "Finished Item", "options": "Item", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "quantity", "fieldtype": "Float", "label": "Quantity", "default": "1.0", "reqd": 1},
+  {"fieldname": "is_active", "fieldtype": "Check", "label": "Is Active", "default": "1"},
+  {"fieldname": "items", "fieldtype": "Table", "label": "Raw Materials", "options": "BOM Item", "reqd": 1}
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Manufacturing",
+ "name": "BOM",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Manufacturing User", "share": 1, "submit": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Manufacturing Manager", "share": 1, "submit": 1, "cancel": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

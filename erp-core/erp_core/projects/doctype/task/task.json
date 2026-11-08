@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "subject",
+  "project",
+  "status",
+  "priority",
+  "assigned_to",
+  "start_date",
+  "end_date",
+  "expected_time",
+  "actual_time",
+  "depends_on",
+  "description"
+ ],
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "TASK-.YYYY.-", "reqd": 1},
+  {"fieldname": "subject", "fieldtype": "Data", "label": "Subject", "reqd": 1},
+  {"fieldname": "project", "fieldtype": "Link", "label": "Project", "options": "Project", "reqd": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Open\nWorking\nPending Review\nCompleted\nCancelled", "default": "Open"},
+  {"fieldname": "priority", "fieldtype": "Select", "label": "Priority", "options": "Low\nMedium\nHigh\nUrgent", "default": "Medium"},
+  {"fieldname": "assigned_to", "fieldtype": "Link", "label": "Assigned To", "options": "User"},
+  {"fieldname": "start_date", "fieldtype": "Date", "label": "Start Date"},
+  {"fieldname": "end_date", "fieldtype": "Date", "label": "Due Date"},
+  {"fieldname": "expected_time", "fieldtype": "Float", "label": "Expected Time (Hours)"},
+  {"fieldname": "actual_time", "fieldtype": "Float", "label": "Actual Time (Hours)", "read_only": 1},
+  {"fieldname": "depends_on", "fieldtype": "Link", "label": "Depends On Task", "options": "Task"},
+  {"fieldname": "description", "fieldtype": "Text Editor", "label": "Details"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Projects",
+ "name": "Task",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Projects User", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Projects Manager", "share": 1, "write": 1, "delete": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

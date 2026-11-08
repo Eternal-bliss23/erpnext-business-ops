@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "work_order",
+  "company",
+  "item",
+  "planned_qty",
+  "actual_qty",
+  "start_time",
+  "end_time",
+  "status",
+  "notes",
+  "material_consumption"
+ ],
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "PC-.YYYY.-", "reqd": 1},
+  {"fieldname": "work_order", "fieldtype": "Link", "label": "Work Order", "options": "Work Order", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "item", "fieldtype": "Link", "label": "Item", "options": "Item", "reqd": 1},
+  {"fieldname": "planned_qty", "fieldtype": "Float", "label": "Planned Qty"},
+  {"fieldname": "actual_qty", "fieldtype": "Float", "label": "Actual Qty"},
+  {"fieldname": "start_time", "fieldtype": "Datetime", "label": "Start Time"},
+  {"fieldname": "end_time", "fieldtype": "Datetime", "label": "End Time"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Planned\nRunning\nPaused\nCompleted\nCancelled", "default": "Planned"},
+  {"fieldname": "notes", "fieldtype": "Text Editor", "label": "Notes"},
+  {"fieldname": "material_consumption", "fieldtype": "Table", "label": "Material Consumption", "options": "Material Consumption"}
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Manufacturing",
+ "name": "Production Cycle",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Manufacturing User", "share": 1, "submit": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Manufacturing Manager", "share": 1, "submit": 1, "cancel": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

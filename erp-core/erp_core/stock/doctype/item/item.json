@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "autoname": "field:item_code",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "item_group",
+  "is_stock_item",
+  "is_purchase_item",
+  "is_sales_item",
+  "description",
+  "standard_rate",
+  "uom"
+ ],
+ "fields": [
+  {"fieldname": "item_code", "fieldtype": "Data", "label": "Item Code", "reqd": 1, "unique": 1},
+  {"fieldname": "item_name", "fieldtype": "Data", "label": "Item Name", "reqd": 1},
+  {"fieldname": "item_group", "fieldtype": "Link", "label": "Item Group", "options": "Item Group"},
+  {"fieldname": "is_stock_item", "fieldtype": "Check", "label": "Maintain Stock", "default": "1"},
+  {"fieldname": "is_purchase_item", "fieldtype": "Check", "label": "Is Purchase Item", "default": "1"},
+  {"fieldname": "is_sales_item", "fieldtype": "Check", "label": "Is Sales Item", "default": "1"},
+  {"fieldname": "description", "fieldtype": "Text Editor", "label": "Description"},
+  {"fieldname": "standard_rate", "fieldtype": "Currency", "label": "Standard Rate"},
+  {"fieldname": "uom", "fieldtype": "Link", "label": "Default UOM", "options": "UOM"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Stock",
+ "name": "Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Stock User", "share": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Stock Manager", "share": 1, "write": 1, "delete": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

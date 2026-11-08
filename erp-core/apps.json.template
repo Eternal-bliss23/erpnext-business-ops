@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://github.com/frappe/frappe",
+    "branch": "version-15"
+  },
+  {
+    "url": "https://github.com/frappe/erpnext",
+    "branch": "version-15"
+  },
+  {
+    "url": "/home/daniel-park/Downloads/test1",
+    "branch": "main"
+  }
+]

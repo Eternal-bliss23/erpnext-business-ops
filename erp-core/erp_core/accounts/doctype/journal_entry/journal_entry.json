@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "posting_date",
+  "company",
+  "voucher_type",
+  "accounts",
+  "total_debit",
+  "total_credit",
+  "user_remark"
+ ],
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "ACC-JV-.YYYY.-", "reqd": 1},
+  {"fieldname": "posting_date", "fieldtype": "Date", "label": "Posting Date", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "voucher_type", "fieldtype": "Select", "label": "Voucher Type", "options": "Journal Entry\nBank Entry\nCash Entry\nDebit Note\nCredit Note\nContra Entry", "reqd": 1},
+  {"fieldname": "accounts", "fieldtype": "Table", "label": "Accounting Entries", "options": "Journal Entry Account", "reqd": 1},
+  {"fieldname": "total_debit", "fieldtype": "Currency", "label": "Total Debit", "read_only": 1},
+  {"fieldname": "total_credit", "fieldtype": "Currency", "label": "Total Credit", "read_only": 1},
+  {"fieldname": "user_remark", "fieldtype": "Small Text", "label": "User Remark"}
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Journal Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts User", "share": 1, "submit": 1, "write": 1},
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Accounts Manager", "share": 1, "submit": 1, "cancel": 1, "amend": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

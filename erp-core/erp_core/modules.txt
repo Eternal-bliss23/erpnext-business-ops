@@ -1,0 +1,15 @@
+Accounts
+Buying
+Selling
+Stock
+Manufacturing
+Projects
+CRM
+Setup
+Core
+HR
+Assets
+Reports
+Integrations
+Support
+Utilities

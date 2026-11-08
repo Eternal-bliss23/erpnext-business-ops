@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "shipment_type",
+  "supplier",
+  "customer",
+  "company",
+  "shipment_date",
+  "delivery_date",
+  "carrier",
+  "tracking_no",
+  "status",
+  "items"
+ ],
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "SHIP-.YYYY.-", "reqd": 1},
+  {"fieldname": "shipment_type", "fieldtype": "Select", "label": "Shipment Type", "options": "Incoming\nOutgoing", "reqd": 1},
+  {"fieldname": "supplier", "fieldtype": "Link", "label": "Supplier", "options": "Supplier"},
+  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer"},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "shipment_date", "fieldtype": "Date", "label": "Shipment Date"},
+  {"fieldname": "delivery_date", "fieldtype": "Date", "label": "Expected/Actual Delivery Date"},
+  {"fieldname": "carrier", "fieldtype": "Data", "label": "Carrier"},
+  {"fieldname": "tracking_no", "fieldtype": "Data", "label": "Tracking No"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nIn Transit\nDelivered\nCancelled", "default": "Draft"},
+  {"fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "Shipment Item"}
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Buying",
+ "name": "Shipment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Stock User", "share": 1, "submit": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Purchase User", "share": 1, "submit": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

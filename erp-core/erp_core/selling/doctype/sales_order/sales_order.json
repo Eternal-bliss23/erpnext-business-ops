@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "company",
+  "transaction_date",
+  "delivery_date",
+  "items",
+  "grand_total",
+  "status"
+ ],
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "SAL-ORD-.YYYY.-", "reqd": 1},
+  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "transaction_date", "fieldtype": "Date", "label": "Order Date", "reqd": 1},
+  {"fieldname": "delivery_date", "fieldtype": "Date", "label": "Delivery Date"},
+  {"fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "Sales Order Item", "reqd": 1},
+  {"fieldname": "grand_total", "fieldtype": "Currency", "label": "Grand Total", "read_only": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nTo Deliver and Bill\nTo Bill\nTo Deliver\nCompleted\nCancelled", "default": "Draft", "read_only": 1}
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Selling",
+ "name": "Sales Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Sales User", "share": 1, "submit": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Sales Manager", "share": 1, "submit": 1, "cancel": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

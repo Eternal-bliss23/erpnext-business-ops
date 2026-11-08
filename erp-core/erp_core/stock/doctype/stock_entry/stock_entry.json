@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-28 23:10:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry_type",
+  "company",
+  "posting_date",
+  "from_warehouse",
+  "to_warehouse",
+  "items",
+  "work_order",
+  "production_cycle"
+ ],
+ "fields": [
+  {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "MAT-STE-.YYYY.-", "reqd": 1},
+  {"fieldname": "stock_entry_type", "fieldtype": "Select", "label": "Purpose", "options": "Material Issue\nMaterial Receipt\nMaterial Transfer\nManufacture\nRepack\nSubcontract", "reqd": 1},
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company", "reqd": 1},
+  {"fieldname": "posting_date", "fieldtype": "Date", "label": "Posting Date", "reqd": 1},
+  {"fieldname": "from_warehouse", "fieldtype": "Link", "label": "From Warehouse", "options": "Warehouse"},
+  {"fieldname": "to_warehouse", "fieldtype": "Link", "label": "To Warehouse", "options": "Warehouse"},
+  {"fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "Stock Entry Detail", "reqd": 1},
+  {"fieldname": "work_order", "fieldtype": "Link", "label": "Work Order", "options": "Work Order"},
+  {"fieldname": "production_cycle", "fieldtype": "Link", "label": "Production Cycle", "options": "Production Cycle"}
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-28 23:10:00.000000",
+ "module": "Stock",
+ "name": "Stock Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Stock User", "share": 1, "submit": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Stock Manager", "share": 1, "submit": 1, "cancel": 1, "write": 1},
+  {"create": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "Manufacturing User", "share": 1, "submit": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
